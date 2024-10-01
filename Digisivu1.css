@@ -51,6 +51,7 @@ a:hover {
 .topnav {
   background-color: black;
   overflow: hidden;
+  align-items: center;
 }
 
 /* Style the links inside the navigation bar */
@@ -73,4 +74,80 @@ a:hover {
 .topnav a.active {
   background-color: darkmagenta;
   color: darkgray;
+}
+.portcont1 {
+  width: 300px;                 
+  height: 130px;                
+  border: 2px solid black;    
+  display: flex;              
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;           
+  position: absolute;
+  top: 150px;                     
+  right: 120px;            
+}
+
+.portcont1 img {
+  width: 100%;               
+  height: auto;              
+  object-fit: cover;         
+}
+.etulinkki {
+  
+    border: 2px solid darkmagenta;  
+    padding: 5px 10px;        
+    display: inline-block;    
+    text-decoration: none;    
+    color: whitesmoke;             
+    border-radius: 5px;       
+
+
+}
+.portcont2 {
+  width: 300px;                 
+  height: 150px;                
+  border: 2px solid black;    
+  display: flex;              
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;           
+  position: absolute; 
+  top: 400px;                     
+  right: 120px;   
+  box-sizing: border-box;         
+}
+
+.portcont2 img {
+  max-width: 100%;               
+  height: auto;              
+  object-fit: cover;         
+}
+.portlink1 {
+  position: absolute; 
+  right: 250px;
+  top: 300px;
+}
+.portlink2{
+  position: absolute; 
+  right: 250px;
+  top: 545px;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #48454c;
+  color: white;
+  text-align: left;
+}
+.topkuva{
+  position: absolute;
+  width: 75px;
+  height: 75px;
+ top: -5px;
+  overflow: hidden;
+
+  left: 300px;
 }
