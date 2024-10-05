@@ -6,6 +6,7 @@ body {
   background-size: 100%; 
   image-rendering: crisp-edges;
   background-attachment: fixed;
+  padding-bottom: 50px;
 }
 
 h1 {
@@ -138,7 +139,7 @@ a:hover {
   top: 545px;
 }
 .footer {
-  position: absolute; 
+  position: relative; 
   left: 0;
   bottom: 0;
   width: 100%;
