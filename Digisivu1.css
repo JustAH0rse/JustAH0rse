@@ -138,14 +138,15 @@ a:hover {
   top: 495px;
 }
 .footer {
-  position: fixed;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#48454c;
+    color: white;
+    text-align: center;
+  }
 
-  position: bottom center;
-  width: 100%;
-  background-color: #48454c;
-  color: white;
-  text-align: left;
-}
 .topkuva{
   position: absolute;
   width: 75px;
