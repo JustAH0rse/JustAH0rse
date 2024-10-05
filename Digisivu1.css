@@ -6,7 +6,6 @@ body {
   background-size: 100%; 
   image-rendering: crisp-edges;
   background-attachment: fixed;
-  padding-bottom: 50px;
 }
 
 h1 {
@@ -89,7 +88,7 @@ a:hover {
   align-items: center;
   overflow: hidden;           
   position: absolute;
-  top: 150px;                     
+  top: 100px;                     
   right: 100px;            
 }
 
@@ -118,7 +117,7 @@ a:hover {
   align-items: center;
   overflow: hidden;           
   position: absolute; 
-  top: 400px;                     
+  top: 350px;                     
   right: 100px;   
   box-sizing: border-box;         
 }
@@ -131,15 +130,15 @@ a:hover {
 .portlink1 {
   position: absolute; 
   right: 230px;
-  top: 300px;
+  top: 250px;
 }
 .portlink2{
   position: absolute; 
   right: 230px;
-  top: 545px;
+  top: 495px;
 }
 .footer {
-  position: fixed; 
+  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -165,7 +164,7 @@ a:hover {
   align-items: center;
   overflow: hidden;           
   position: absolute; 
-  top: 400px;                     
+  top: 350px;                     
   left: 100px;   
   box-sizing: border-box; 
 }
@@ -183,7 +182,7 @@ a:hover {
   align-items: center;
   overflow: hidden;           
   position: absolute; 
-  top: 150px;                     
+  top: 100px;                     
   left: 100px;   
   box-sizing: border-box;
 }
@@ -196,12 +195,12 @@ a:hover {
 .portlink3{
   position: absolute; 
   left: 230px;
-  top: 545px;
+  top: 495px;
 }
 .portlink4{
   position: absolute; 
   left: 230px;
-  top: 300px;
+  top: 250px;
 }
 .porttext{
   text-align: center;
