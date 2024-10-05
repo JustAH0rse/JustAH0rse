@@ -138,9 +138,9 @@ a:hover {
   top: 495px;
 }
 .footer {
-    position: fixed;
+    position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 700px;
     width: 100%;
     background-color:#48454c;
     color: white;
