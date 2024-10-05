@@ -95,7 +95,7 @@ a:hover {
 .portcont1 img {
   width: 100%;               
   height: auto;              
-           
+  object-fit: cover;         
 }
 .etulinkki {
   
@@ -125,7 +125,7 @@ a:hover {
 .portcont2 img {
   max-width: 100%;               
   height: auto;              
-           
+  object-fit: cover;         
 }
 .portlink1 {
   position: absolute; 
@@ -138,7 +138,7 @@ a:hover {
   top: 545px;
 }
 .footer {
-  position: fixed;
+  position: relative; 
   left: 0;
   bottom: 0;
   width: 100%;
@@ -171,7 +171,7 @@ a:hover {
 .portcont3 img{
   max-width: 100%;               
   height: auto;              
-  
+  object-fit: cover;
 }
 .portcont4 {
   width: 300px;                 
@@ -190,7 +190,7 @@ a:hover {
 .portcont4 img {
   max-width: 100%;               
   height: auto;              
-           
+  object-fit: cover;         
 }
 .portlink3{
   position: absolute; 
