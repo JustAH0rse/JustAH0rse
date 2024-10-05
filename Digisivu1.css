@@ -75,6 +75,16 @@ a:hover {
   background-color: darkmagenta;
   color: darkgray;
 }
+@media (max-width: 768px) {
+  .portcont1, .portcont2, .portcont3, .portcont4 {
+    position: relative; /* Change to relative positioning */
+    width: 100%; /* Make them take full width on mobile */
+    margin-bottom: 20px; /* Add space between them */
+    top: auto; /* Remove top positioning */
+    right: auto; /* Remove right positioning */
+    left: auto; /* Remove left positioning */
+  }
+}
 .portcont1 {
   width: 300px;                 
   height: 130px;                
