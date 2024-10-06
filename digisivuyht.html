@@ -4,7 +4,7 @@
 
     <link rel="stylesheet" href="Digisivu1.css">
 
-    <script src="digisivupeli.js"> </script>
+    <script src="digisivupeli.js" defer> </script>
 
 <style>
 
@@ -14,6 +14,7 @@ body {
 
 </style>
 
+<script src="virtual-controls.js" defer></script>  
 
 </head>
 
@@ -41,6 +42,16 @@ Eino Kontio
     <div class="geeks"></div>
 </p>
 <canvas id="board"></canvas>
+
+<div class="virtual-keyboard">
+    <button id="up" class="control-btn">↑</button>
+    <div class="horiz-controls">
+      <button id="left" class="control-btn">←</button>
+      <button id="right" class="control-btn">→</button>
+    </div>
+    <button id="down" class="control-btn">↓</button>
+  </div>
+ 
 <div class="footer">
     <p>Eino Kontio 2024</p>
   </div>

@@ -126,6 +126,37 @@ a:hover {
   box-sizing: border-box;
   z-index: 10; /* Ensures it's above other content */
 }
+.virtual-keyboard {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 100; /* Ensures buttons stay above game canvas */
+}
+
+.horiz-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 150px; /* Adjusted width for smaller buttons */
+}
+
+.control-btn {
+  background-color: #48454c;
+  color: whitesmoke;
+  border: 2px solid darkmagenta;
+  border-radius: 5px;
+  padding: 10px; /* Smaller padding for smaller buttons */
+  margin: 5px;
+  font-size: 18px; /* Smaller font size */
+  cursor: pointer;
+}
+
+.control-btn:active {
+  background-color: darkgray;
+}
 
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
