@@ -138,7 +138,7 @@ a:hover {
   top: 495px;
 }
 .footer {
-  position: fixed; /* Keeps the footer at the bottom */
+  position: fixed; /* Keeps the footer fixed at the bottom */
   left: 0;
   bottom: 0;
   width: 100%;
@@ -146,8 +146,9 @@ a:hover {
   color: white;
   text-align: left;
   padding: 10px;
+  height: 50px; /* Adjust the height to ensure visibility */
   box-sizing: border-box;
-  height: 50px; /* Adjust based on content height */
+  z-index: 10; /* Ensures it's above other content */
 }
 .topkuva{
   position: absolute;
