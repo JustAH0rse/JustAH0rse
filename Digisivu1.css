@@ -8,7 +8,7 @@ body {
   image-rendering: crisp-edges;
   background-attachment: fixed;
   margin: 0;
-  padding-bottom: 100px; /* To avoid footer overlapping content */
+  padding-bottom: 100px; 
   text-align: center;
 }
 
@@ -58,7 +58,7 @@ a:hover {
   top: -10px;
   overflow: hidden;
 
-  left: 300px;
+  left: 350px;
 }
 /* Add a black background color to the top navigation */
 .topnav {
@@ -141,15 +141,18 @@ a:hover {
 .table {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 20px auto;
-  width: 80%; /* Set width for better layout */
+  width: 80%; 
 }
 .package {
   border: 1px solid #ccc;
-  margin: 0 10px;
+  margin: 10px;
   padding: 20px;
   border-radius: 5px;
-  width: 200px; /* Fixed width for better alignment */
+  width: 250px;
+  max-width: 100%;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
   background-color: #48454c;
 }
 .package h2 {
@@ -167,32 +170,12 @@ li {
 }
 
 
-@media (max-width: 768px) {
-  .virtual-keyboard {
-      display: flex; /* Show on mobile devices */
+@media (max-width: 600px) { /* Media query for mobile screens */
+  .package {
+      width: 100%; /* Make packages full width on small screens */
+      margin: 10px 0; /* Center them vertically */
   }
 }
-.horiz-controls {
-  display: flex;
-  justify-content: space-between;
-  width: 150px; /* Adjusted width for smaller buttons */
-}
-
-.control-btn {
-  background-color: #48454c;
-  color: whitesmoke;
-  border: 2px solid darkmagenta;
-  border-radius: 5px;
-  padding: 10px; /* Smaller padding for smaller buttons */
-  margin: 5px;
-  font-size: 18px; /* Smaller font size */
-  cursor: pointer;
-}
-
-.control-btn:active {
-  background-color: darkgray;
-}
-
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   /* Stack portfolio containers vertically on mobile */
