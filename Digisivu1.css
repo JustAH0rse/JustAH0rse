@@ -10,6 +10,51 @@ body {
   margin: 0;
   padding-bottom: 100px; /* To avoid footer overlapping content */
 }
+.keski{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;
+  }
+  a {
+    color: whitesmoke;
+  }
+a:hover {
+    background-color: darkgray;
+    color: black;
+
+
+
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: black;
+  overflow: hidden;
+  align-items: center;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: darkmagenta;
+  color: darkgray;
+}
 
 /* Portfolio containers for desktop */
 .portcont1, .portcont2, .portcont3, .portcont4 {
