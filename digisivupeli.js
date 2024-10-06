@@ -1,14 +1,14 @@
 let blockSize = 25;
-let total_row = 17; //total row number
-let total_col = 17; //total column number
+let total_row = 17; // total row number
+let total_col = 17; // total column number
 let board;
 let context;
 
 let snakeX = blockSize * 5;
 let snakeY = blockSize * 5;
 
-let speedX = 0;  //speed of snake in x 
-let speedY = 0;  //speed of snake in Y 
+let speedX = 0; // speed of snake in x 
+let speedY = 0; // speed of snake in Y 
 
 let snakeBody = [];
 
@@ -18,7 +18,7 @@ let foodY;
 let gameOver = false;
 
 window.onload = function () {
-    //  board height and width
+    // board height and width
     board = document.getElementById("board");
     board.height = total_row * blockSize;
     board.width = total_col * blockSize;
@@ -28,6 +28,32 @@ window.onload = function () {
     document.addEventListener("keyup", changeDirection);
     // snake speed
     setInterval(update, 1000 / 10);
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
+    // Show the virtual keyboard only on mobile devices
+    const virtualKeyboard = document.getElementById('virtual-keyboard');
+    if (isMobile) {
+        virtualKeyboard.style.display = 'block'; // Show the virtual keyboard
+    } else {
+        virtualKeyboard.style.display = 'none'; // Hide the virtual keyboard
+    }
+
+    // Add event listeners for the virtual buttons
+    document.getElementById('up').addEventListener('click', function() {
+        changeDirection({ code: "ArrowUp" });
+    });
+    
+    document.getElementById('down').addEventListener('click', function() {
+        changeDirection({ code: "ArrowDown" });
+    });
+    
+    document.getElementById('left').addEventListener('click', function() {
+        changeDirection({ code: "ArrowLeft" });
+    });
+    
+    document.getElementById('right').addEventListener('click', function() {
+        changeDirection({ code: "ArrowRight" });
+    });
 }
 
 function update() {
@@ -58,17 +84,17 @@ function update() {
     }
 
     context.fillStyle = "white";
-    snakeX += speedX * blockSize; //updating Snake position in X coordinate.
-    snakeY += speedY * blockSize;  //updating Snake position in Y coordinate.
+    snakeX += speedX * blockSize; // updating Snake position in X coordinate.
+    snakeY += speedY * blockSize; // updating Snake position in Y coordinate.
     context.fillRect(snakeX, snakeY, blockSize, blockSize);
     for (let i = 0; i < snakeBody.length; i++) {
         context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize);
     }
 
     if (snakeX < 0 
-        || snakeX > total_col * blockSize 
+        || snakeX >= total_col * blockSize 
         || snakeY < 0 
-        || snakeY > total_row * blockSize) { 
+        || snakeY >= total_row * blockSize) { 
         
         // Out of bounds
         gameOver = true;
@@ -77,7 +103,6 @@ function update() {
 
     for (let i = 0; i < snakeBody.length; i++) {
         if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]) { 
-            
             // Snake eats own body
             gameOver = true;
             alert("Game Over");
@@ -94,17 +119,17 @@ function changeDirection(e) {
         speedY = -1;
     }
     else if (e.code == "ArrowDown" && speedY != -1) {
-        //If down arrow key pressed
+        // If down arrow key pressed
         speedX = 0;
         speedY = 1;
     }
     else if (e.code == "ArrowLeft" && speedX != 1) {
-        //If left arrow key pressed
+        // If left arrow key pressed
         speedX = -1;
         speedY = 0;
     }
     else if (e.code == "ArrowRight" && speedX != -1) { 
-        //If Right arrow key pressed
+        // If Right arrow key pressed
         speedX = 1;
         speedY = 0;
     }
@@ -112,10 +137,9 @@ function changeDirection(e) {
 
 // Randomly place food
 function placeFood() {
-
     // in x coordinates.
     foodX = Math.floor(Math.random() * total_col) * blockSize; 
     
-    //in y coordinates.
+    // in y coordinates.
     foodY = Math.floor(Math.random() * total_row) * blockSize; 
 }
