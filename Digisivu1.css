@@ -21,12 +21,13 @@ body {
   align-items: center;
   overflow: hidden;
   box-sizing: border-box;
+  margin: 20px auto; /* Add margin for spacing */
 }
 
 /* Image styling */
 .portcont1 img, .portcont2 img, .portcont3 img, .portcont4 img {
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  height: 100%; /* Change to 100% to fill container */
   object-fit: cover;
 }
 
@@ -51,18 +52,26 @@ body {
   .portcont1, .portcont2, .portcont3, .portcont4 {
     width: 90%;
     margin: 20px auto; /* Add margin for spacing */
-    position: static; /* Remove absolute positioning */
+    height: auto; /* Allow height to adjust based on content */
   }
 
   /* Stack portfolio links under each image */
   .portlink1, .portlink2, .portlink3, .portlink4 {
-    position: static;
+    display: block;
     text-align: center;
+    margin-top: 10px; /* Add space between image and link */
   }
 
   /* Adjust footer to avoid overlap on mobile */
   .footer {
     position: relative; /* Makes the footer static on smaller screens */
     margin-top: 20px;
+  }
+
+  /* Ensure proper spacing between portfolio items */
+  .portfolio-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Adds space between portfolio items */
   }
 }
