@@ -1,4 +1,5 @@
 /* General body styles */
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-image: linear-gradient(black, #48454c);
@@ -60,14 +61,14 @@ a:hover {
 
   left: 350px;
 }
-/* Add a black background color to the top navigation */
+
 .topnav {
   background-color: black;
   overflow: hidden;
   align-items: center;
 }
 
-/* Style the links inside the navigation bar */
+
 .topnav a {
   float: left;
   color: #f2f2f2;
@@ -77,13 +78,13 @@ a:hover {
   font-size: 17px;
 }
 
-/* Change the color of links on hover */
+
 .topnav a:hover {
   background-color: #ddd;
   color: black;
 }
 
-/* Add a color to the active/current link */
+
 .topnav a.active {
   background-color: darkmagenta;
   color: darkgray;
@@ -99,23 +100,23 @@ a:hover {
   align-items: center;
   overflow: hidden;
   box-sizing: border-box;
-  margin: 20px auto; /* Add margin for spacing */
+  margin: 20px auto; 
 }
 .portlink1, .portlink2, .portlink3, .portlink4, .porttext {
   display: block;
   text-align: center;
-  margin-top: 10px; /* Add space between image and link */
+  margin-top: 10px; 
 }
 /* Image styling */
 .portcont1 img, .portcont2 img, .portcont3 img, .portcont4 img {
   width: 100%;
-  height: 100%; /* Change to 100% to fill container */
+  height: 100%; 
   object-fit: cover;
 }
 
-/* Footer styling */
+
 .footer {
-  position: fixed; /* Keeps the footer fixed at the bottom */
+  position: fixed; 
   left: 0;
   bottom: 0;
   width: 100%;
@@ -125,18 +126,9 @@ a:hover {
   padding: 10px;
   height: 50px;
   box-sizing: border-box;
-  z-index: 10; /* Ensures it's above other content */
+  z-index: 10; 
 }
-.virtual-keyboard {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  z-index: 100; /* Ensures buttons stay above game canvas */
-}
+
 
 .table {
   display: flex;
@@ -162,46 +154,46 @@ a:hover {
   border-radius: 5px;
 }
 ul {
-  list-style-type: none; /* Remove default list styling */
-  padding: 0; /* Remove padding */
+  list-style-type: none; 
+  padding: 0; 
 }
 li {
-  padding: 5px 0; /* Add space between items */
+  padding: 5px 0; 
 }
 
 
 @media (max-width: 600px) { /* Media query for mobile screens */
   .package {
-      width: 100%; /* Make packages full width on small screens */
-      margin: 10px 0; /* Center them vertically */
+      width: 100%; 
+      margin: 10px 0; 
   }
 }
-/* Responsive styles for smaller screens */
+
 @media (max-width: 768px) {
-  /* Stack portfolio containers vertically on mobile */
+  
   .portcont1, .portcont2, .portcont3, .portcont4 {
     width: 90%;
-    margin: 20px auto; /* Add margin for spacing */
-    height: auto; /* Allow height to adjust based on content */
+    margin: 20px auto; 
+    height: auto; 
   }
 
   /* Stack portfolio links under each image */
   .portlink1, .portlink2, .portlink3, .portlink4 {
     display: block;
     text-align: center;
-    margin-top: 10px; /* Add space between image and link */
+    margin-top: 10px; 
   }
 
-  /* Adjust footer to avoid overlap on mobile */
+  
   .footer {
-    position: fixed; /* Makes the footer static on smaller screens */
+    position: fixed; 
     margin-top: 20px;
   }
 
-  /* Ensure proper spacing between portfolio items */
+  
   .portfolio-container {
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Adds space between portfolio items */
+    gap: 30px; 
   }
 }
