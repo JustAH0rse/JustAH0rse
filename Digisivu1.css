@@ -50,6 +50,15 @@ a:hover {
 
 
 }
+.topkuva{
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  top: -10px;
+  overflow: hidden;
+
+  left: 300px;
+}
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: black;
@@ -91,7 +100,11 @@ a:hover {
   box-sizing: border-box;
   margin: 20px auto; /* Add margin for spacing */
 }
-
+.portlink1, .portlink2, .portlink3, .portlink4, .porttext {
+  display: block;
+  text-align: center;
+  margin-top: 10px; /* Add space between image and link */
+}
 /* Image styling */
 .portcont1 img, .portcont2 img, .portcont3 img, .portcont4 img {
   width: 100%;
@@ -132,7 +145,7 @@ a:hover {
 
   /* Adjust footer to avoid overlap on mobile */
   .footer {
-    position: relative; /* Makes the footer static on smaller screens */
+    position: fixed; /* Makes the footer static on smaller screens */
     margin-top: 20px;
   }
 
