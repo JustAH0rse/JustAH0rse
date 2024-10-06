@@ -138,15 +138,17 @@ a:hover {
   top: 495px;
 }
 .footer {
-    position: absolute;
-    left: 0;
-    bottom: 700px;
-    width: 100%;
-    background-color:#48454c;
-    color: white;
-    text-align: center;
-  }
-
+  position: fixed; /* Keeps the footer at the bottom */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #48454c;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 50px; /* Adjust based on content height */
+}
 .topkuva{
   position: absolute;
   width: 75px;
@@ -205,4 +207,15 @@ a:hover {
 }
 .porttext{
   text-align: center;
+}
+@media (max-width: 768px) {
+  /* Adjust portfolio containers to full width */
+  .portcont1, .portcont2, .portcont3, .portcont4 {
+    width: 90%; /* Adjust for smaller screen sizes */
+  }
+
+  /* Adjust footer to avoid overlap */
+  .footer {
+    position: relative; /* Makes the footer static on smaller screens */
+  }
 }
