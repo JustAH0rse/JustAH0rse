@@ -1,142 +1,36 @@
+/* General body styles */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(black, #48454c);
-    background-position: center; 
-  background-repeat: no-repeat;  
-  background-size: 100%; 
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: linear-gradient(black, #48454c);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
   image-rendering: crisp-edges;
   background-attachment: fixed;
+  margin: 0;
+  padding-bottom: 100px; /* To avoid footer overlapping content */
 }
 
-h1 {
-    color: rgb(181, 28, 181);
-    text-align: center;
-}
-
-p {
-
-    color: lightgray;
-}
-h2 {
-
-    color: rgb(181, 28, 181);;
-    text-align: center;
-
-}
-div {
-    color: lightgray;
-    text-align: center;
-}
-a {
-    text-align: center;
-}
-.keski{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 150px;
-    height: 150px;
-  }
-  a {
-    color: whitesmoke;
-  }
-a:hover {
-    background-color: darkgray;
-    color: black;
-
-
-
-}
-/* Add a black background color to the top navigation */
-.topnav {
-  background-color: black;
-  overflow: hidden;
+/* Portfolio containers for desktop */
+.portcont1, .portcont2, .portcont3, .portcont4 {
+  width: 300px;
+  height: 150px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-/* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-  background-color: darkmagenta;
-  color: darkgray;
-}
+/* Image styling */
 .portcont1 img, .portcont2 img, .portcont3 img, .portcont4 img {
   width: 100%;
   height: auto; /* Maintain aspect ratio */
-}
-.portcont1 {
-  width: 300px;                 
-  height: 130px;                
-  border: 2px solid black;    
-  display: flex;              
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;           
-  position: absolute;
-  top: 100px;                     
-  right: 100px;            
+  object-fit: cover;
 }
 
-.portcont1 img {
-  width: 100%;               
-  height: auto;              
-  object-fit: cover;         
-}
-.etulinkki {
-  
-    border: 2px solid darkmagenta;  
-    padding: 5px 10px;        
-    display: inline-block;    
-    text-decoration: none;    
-    color: whitesmoke;             
-    border-radius: 5px;       
-
-
-}
-.portcont2 {
-  width: 300px;                 
-  height: 150px;                
-  border: 2px solid black;    
-  display: flex;              
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;           
-  position: absolute; 
-  top: 350px;                     
-  right: 100px;   
-  box-sizing: border-box;         
-}
-
-.portcont2 img {
-  max-width: 100%;               
-  height: auto;              
-  object-fit: cover;         
-}
-.portlink1 {
-  position: absolute; 
-  right: 230px;
-  top: 250px;
-}
-.portlink2{
-  position: absolute; 
-  right: 230px;
-  top: 495px;
-}
+/* Footer styling */
 .footer {
   position: fixed; /* Keeps the footer fixed at the bottom */
   left: 0;
@@ -146,77 +40,29 @@ a:hover {
   color: white;
   text-align: left;
   padding: 10px;
-  height: 50px; /* Adjust the height to ensure visibility */
+  height: 50px;
   box-sizing: border-box;
   z-index: 10; /* Ensures it's above other content */
 }
-.topkuva{
-  position: absolute;
-  width: 75px;
-  height: 75px;
- top: -5px;
-  overflow: hidden;
 
-  left: 300px;
-}
-.portcont3{
-  width: 300px;                 
-  height: 150px;                
-  border: 2px solid black;    
-  display: flex;              
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;           
-  position: absolute; 
-  top: 350px;                     
-  left: 100px;   
-  box-sizing: border-box; 
-}
-.portcont3 img{
-  max-width: 100%;               
-  height: auto;              
-  object-fit: cover;
-}
-.portcont4 {
-  width: 300px;                 
-  height: 150px;                
-  border: 2px solid black;    
-  display: flex;              
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;           
-  position: absolute; 
-  top: 100px;                     
-  left: 100px;   
-  box-sizing: border-box;
-}
-
-.portcont4 img {
-  max-width: 100%;               
-  height: auto;              
-  object-fit: cover;         
-}
-.portlink3{
-  position: absolute; 
-  left: 230px;
-  top: 495px;
-}
-.portlink4{
-  position: absolute; 
-  left: 230px;
-  top: 250px;
-}
-.porttext{
-  text-align: center;
-}
+/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
-  /* Adjust portfolio containers to full width */
+  /* Stack portfolio containers vertically on mobile */
   .portcont1, .portcont2, .portcont3, .portcont4 {
-    width: 90%; /* Adjust for smaller screen sizes */
+    width: 90%;
+    margin: 20px auto; /* Add margin for spacing */
+    position: static; /* Remove absolute positioning */
   }
 
-  /* Adjust footer to avoid overlap */
+  /* Stack portfolio links under each image */
+  .portlink1, .portlink2, .portlink3, .portlink4 {
+    position: static;
+    text-align: center;
+  }
+
+  /* Adjust footer to avoid overlap on mobile */
   .footer {
     position: relative; /* Makes the footer static on smaller screens */
+    margin-top: 20px;
   }
 }
