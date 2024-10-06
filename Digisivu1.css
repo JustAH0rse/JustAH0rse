@@ -9,6 +9,7 @@ body {
   background-attachment: fixed;
   margin: 0;
   padding-bottom: 100px; /* To avoid footer overlapping content */
+  text-align: center;
 }
 
 h1 {
@@ -131,18 +132,44 @@ a:hover {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  
+  display: none;
   flex-direction: column;
   align-items: center;
   z-index: 100; /* Ensures buttons stay above game canvas */
 }
-.virtual-keyboard {
-  display: none; /* Initially hide the virtual keyboard */
+
+.table {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  width: 80%; /* Set width for better layout */
 }
+.package {
+  border: 1px solid #ccc;
+  margin: 0 10px;
+  padding: 20px;
+  border-radius: 5px;
+  width: 200px; /* Fixed width for better alignment */
+  background-color: #48454c;
+}
+.package h2 {
+  background-color: darkmagenta;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+}
+li {
+  padding: 5px 0; /* Add space between items */
+}
+
 
 @media (max-width: 768px) {
   .virtual-keyboard {
-      display: block; /* Show on mobile devices */
+      display: flex; /* Show on mobile devices */
   }
 }
 .horiz-controls {
