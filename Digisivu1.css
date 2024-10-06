@@ -10,6 +10,29 @@ body {
   margin: 0;
   padding-bottom: 100px; /* To avoid footer overlapping content */
 }
+
+h1 {
+  color: rgb(181, 28, 181);
+  text-align: center;
+}
+
+p {
+
+  color: lightgray;
+}
+h2 {
+
+  color: rgb(181, 28, 181);;
+  text-align: center;
+
+}
+div {
+  color: lightgray;
+  text-align: center;
+}
+a {
+  text-align: center;
+}
 .keski{
     display: block;
     margin-left: auto;
